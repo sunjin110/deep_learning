@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 import usecase
 import usecase.third_dimention_nural_network
+import usecase.handwritten_number
 
 def AND(x1: int, x2: int) -> bool:
     x = np.array([x1, x2])
@@ -139,4 +140,7 @@ def neural_network_third_dimention():
 # neural_network()
 # neural_network_third_dimention()
 
-usecase.third_dimention_nural_network.run()
+# usecase.third_dimention_nural_network.run()
+
+print("==== 3.6手書き数字認識")
+usecase.handwritten_number.batch_run()
