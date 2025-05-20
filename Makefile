@@ -12,7 +12,7 @@ run:
 	@PYTHONPATH=src python3 src/main.py
 
 test:
-	PYTHONPATH=src pytest -s
+	PYTHONPATH=src pytest -s ./src/...
 
 mnist_show:
 	PYTHONPATH=src python3 src/cmd/mnist_show.py

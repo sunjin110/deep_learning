@@ -1,7 +1,6 @@
 import numpy as np
 import domain.activation_function as activation
 import domain
-
 # 3層のNeuralネットワークの実装
 
 def init_network():
@@ -15,10 +14,10 @@ def init_network():
     return network
 
 def forward(network, x):
-    W1, W2, W3 = network["W1"], network["W2"], network["W3"]
+    w1, W2, W3 = network["w1"], network["W2"], network["W3"]
     b1, b2, b3 = network["b1"], network["b2"], network["b3"]
 
-    a1 = np.dot(x, W1) + b1
+    a1 = np.dot(x, w1) + b1
     z1 = activation.sigmoid(a1)
     a2 = np.dot(z1, W2) + b2
     z2 = activation.sigmoid(a2)
