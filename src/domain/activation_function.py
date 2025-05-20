@@ -8,3 +8,7 @@ def step_function(x):
 
 def ReLU(x):
     return np.maximum(0, x)
+
+def softmax(x):
+    x = x - np.max(x, axis=-1, keepdims=True)   # オーバーフロー対策
+    return np.exp(x) / np.sum(np.exp(x), axis=-1, keepdims=True)
